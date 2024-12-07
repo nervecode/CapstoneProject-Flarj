@@ -1,0 +1,141 @@
+/* Quiz Container */
+.quiz-container {
+  text-align: center;
+  font-size: 18px;
+  min-height: 89vh;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 90%; /* Ensure it fits within the screen */
+}
+
+/* Quiz Title and Feedback */
+.quiz-container h1 {
+  color: #092834;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Planet Question */
+.planet-question {
+  margin: 20px 0;
+}
+
+/* Planet Image */
+.planet-image {
+  width: 100%; /* Makes it responsive */
+  max-width: 250px; /* Limit for larger screens */
+  height: auto;
+  object-fit: contain;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+/* Input Box */
+.guess-input {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Submit Button */
+.guess-button {
+  padding: 10px 20px;
+  background-color: #092834;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.guess-button:hover {
+  background-color: #0b3c5d;
+}
+
+/* Feedback Message */
+.feedback {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: green;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.additional-questions {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.additional-questions ol {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+
+/* Media Queries */
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+  .quiz-container {
+    font-size: 16px;
+  }
+
+  .quiz-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .guess-input {
+    font-size: 0.9rem;
+  }
+
+  .guess-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .quiz-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .planet-image {
+    max-width: 200px; /* Smaller images on small screens */
+  }
+
+  .guess-input {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .guess-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .tp-back-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

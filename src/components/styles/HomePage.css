@@ -1,0 +1,139 @@
+.video__gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 20px;
+}
+
+.video__player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.video__player video {
+  width: 80%;
+  max-width: 200px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video__player h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.video__thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  width: 100%; /* Ensure thumbnails span the available width */
+  max-width: 1200px; /* Optional: Limit the width of the thumbnails */
+}
+
+.thumbnail {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail.active .thumbnail-video {
+  border-color: #007bff;
+}
+
+.thumbnail.active p {
+  color: #007bff;
+}
+
+
+.floating-buttons {
+  position: fixed;
+  top: 150px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.float-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.float-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video__player video {
+    max-width: 100%;
+    width: 90%;
+  }
+
+  .thumbnail-video {
+    border-radius: 4px;
+  }
+
+  .floating-buttons {
+    right: 10px;
+    top: 100px;
+  }
+
+  .float-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video__player video {
+    max-width: 100%;
+    width: 95%;
+  }
+
+  .video__thumbnails {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .floating-buttons {
+    right: 5px;
+    top: 80px;
+  }
+
+  .float-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

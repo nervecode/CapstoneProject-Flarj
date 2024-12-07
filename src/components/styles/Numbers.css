@@ -1,0 +1,64 @@
+.numbers-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .numbers-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusts columns based on available space */
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .number-card {
+    background-color: #85c1e9;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .number-card:hover {
+    transform: scale(1.1);
+    background-color: #3498db;
+  }
+  
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .numbers-container h1 {
+    font-size: 1.8rem; /* Adjust header font size on medium screens */
+  }
+
+  .numbers-cards {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust grid columns on tablets */
+    gap: 10px; /* Reduce gap between cards */
+  }
+
+  .number-card {
+    font-size: 20px; /* Reduce font size for smaller devices */
+    padding: 15px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .numbers-container h1 {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+  }
+
+  .numbers-cards {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* One or fewer columns on very small screens */
+    gap: 5px; /* Smaller gap on smaller screens */
+  }
+
+  .number-card {
+    font-size: 18px; /* Further reduce font size */
+    padding: 12px; /* Adjust padding for mobile devices */
+  }
+}

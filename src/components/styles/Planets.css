@@ -1,0 +1,86 @@
+.solar-system-carousel {
+  text-align: center;
+  margin: 20px;
+}
+
+.ccarousel-container {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-slide {
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+  color: #092834;
+}
+
+.pplanet-image {
+  width: 80%; /* Make image responsive */
+  max-width: 500px; /* Limit maximum size */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+}
+
+.ccarousel-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ccarousel-button:hover {
+  transform: scale(1.2);
+}
+
+.about-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  z-index: 1000; /* Ensures the button is above other content */
+}
+
+
+@media (max-width: 768px) {
+  .ccarousel-container {
+    height: 60vh; /* Reduce carousel height for smaller screens */
+    gap: 5px; /* Reduce space between carousel buttons */
+  }
+
+  .pplanet-image {
+    width: 90%; /* Make images take up more space on smaller screens */
+    max-width: 400px; /* Limit the image size */
+  }
+
+  .ccarousel-button {
+    font-size: 20px; /* Reduce button size on smaller screens */
+  }
+
+  .about-btn {
+    padding: 12px 25px; /* Adjust button padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .ccarousel-container {
+    height: 50vh; /* Further reduce carousel height on very small screens */
+  }
+
+  .pplanet-image {
+    width: 90%; /* Images take more space */
+    max-width: 350px; /* Limit image size */
+  }
+
+  .ccarousel-button {
+    font-size: 18px; /* Smaller buttons on very small screens */
+  }
+
+  .about-btn {
+    padding: 10px 20px; /* Adjust button padding for very small screens */
+  }
+}

@@ -1,0 +1,16 @@
+.diamond__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background: #092834;
+    gap: 10rem;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .diamond__nav {
+      flex-direction: column; /* Stack links vertically on smaller screens */
+      gap: 1rem;
+    }
+  }

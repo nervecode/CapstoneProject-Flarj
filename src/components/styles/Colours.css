@@ -1,0 +1,176 @@
+.color-reviewer-container {
+  height: auto;
+  margin: 30px 10px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f0f7d4;
+}
+
+.color-rev-h1 {
+  color: #0f3f46;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.touch__paint,
+.toggle-btn,
+.challenge-btn {
+  position: absolute;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background-color: #0f3f46;
+}
+
+.touch__paint {
+  top: 70px;
+  right: 10px;
+}
+
+.toggle-btn {
+  top: 10px;
+  right: 10px;
+}
+
+.challenge-btn {
+  bottom: -20px;
+  right: 20px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #092834;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.options-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-container li {
+  margin-bottom: 10px;
+}
+
+.options-container a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.options-container a:hover {
+  text-decoration: underline;
+}
+
+.color-sections-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.color-section {
+  flex: 1;
+  max-width: 30%;
+  margin: 20px 0;
+}
+
+.color-section h2 {
+  color: #0f3f46;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.color-box {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.color-info {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #0f3f46;
+}
+
+.color-name,
+.color-hex {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .touch__paint,
+  .toggle-btn,
+  .challenge-btn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .color-box {
+    width: 70px;
+    height: 70px;
+  }
+
+  .color-rev-h1 {
+    font-size: 1.5rem;
+  }
+
+  .color-section h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .touch__paint,
+  .toggle-btn,
+  .challenge-btn {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .color-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .color-rev-h1 {
+    font-size: 1.2rem;
+  }
+
+  .color-section h2 {
+    font-size: 1rem;
+  }
+}

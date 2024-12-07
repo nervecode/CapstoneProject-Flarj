@@ -1,0 +1,112 @@
+.taste-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1eb90;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Title */
+.taste-title {
+  color: #092834;
+  font-size: 4vw; /* Adjust based on screen size */
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+
+/* Food Item List */
+.food-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow food items to wrap on smaller screens */
+  gap: 20px;
+  margin-top: 50px;
+  font-size: 3rem;
+  justify-content: center; /* Center the items */
+}
+
+.food-item {
+  background-color: #66b032;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  font-size: 1.2rem; /* Base font size */
+}
+
+.food-item:hover {
+  background-color: #092834;
+}
+
+/* Taste Message */
+.taste-message {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  background-color: #b2d732;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 5s ease;
+  text-align: center;
+}
+
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+  .taste-title {
+    font-size: 5vw; /* Adjust title size for tablets */
+  }
+
+  .food-item {
+    font-size: 1.5rem; /* Slightly smaller font for food items */
+    padding: 8px 16px;
+  }
+
+  .taste-message {
+    font-size: 2rem; /* Adjust message font size */
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 480px) {
+  .taste-title {
+    font-size: 6vw; /* Adjust title size for small screens */
+  }
+
+  .food-item {
+    font-size: 1.2rem; /* Adjust font size for food items */
+    padding: 6px 12px;
+  }
+
+  .taste-message {
+    font-size: 1.8rem; /* Adjust message font size */
+  }
+
+  .food-list {
+    flex-direction: column; /* Stack food items vertically */
+    gap: 10px;
+  }
+}

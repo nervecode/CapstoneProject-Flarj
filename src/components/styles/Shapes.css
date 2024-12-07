@@ -1,0 +1,62 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f7d4;
+}
+
+h1 {
+  color: #b2d732;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Game Area Styling */
+.game-area {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+  .game-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .shapes-palette,
+  .canvas {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .shapes-palette,
+  .canvas {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .canvas {
+    height: 300px; /* Reduce canvas height for smaller screens */
+  }
+
+  .shape-item {
+    font-size: 14px; /* Adjust font size for smaller shapes */
+    padding: 8px;
+  }
+}

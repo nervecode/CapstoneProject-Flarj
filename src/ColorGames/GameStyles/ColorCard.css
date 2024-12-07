@@ -1,0 +1,134 @@
+/* General Styling */
+.color-card-game-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #092834;
+  font-size: 2rem;
+}
+
+p {
+  color: #092834;
+  font-size: 18px;
+}
+
+
+/* Target Area */
+.target-area {
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  border: 2px dashed #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.target-color {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+}
+
+/* Cards Area */
+.cards-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+}
+
+.color-card {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.color-card:hover {
+  transform: scale(1.1);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem; /* Adjust header size */
+  }
+
+  .target-area {
+    width: 250px; /* Smaller target area */
+    height: 150px;
+  }
+
+  .target-color {
+    width: 80px; /* Smaller target color */
+    height: 80px;
+  }
+
+  .color-card {
+    width: 80px; /* Smaller color cards */
+    height: 80px;
+  }
+
+  .cards-area {
+    justify-content: center; /* Align cards in center */
+  }
+
+  button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Smaller header size */
+  }
+
+  .target-area {
+    width: 200px; /* Smaller target area */
+    height: 150px;
+  }
+
+  .target-color {
+    width: 70px; /* Smaller target color */
+    height: 70px;
+  }
+
+  .color-card {
+    width: 60px; /* Smaller color cards */
+    height: 60px;
+  }
+
+  .cards-area {
+    justify-content: center;
+  }
+
+  .message {
+    font-size: 1rem; /* Smaller message font size */
+  }
+
+  button {
+    font-size: 12px; /* Smaller button font size */
+    padding: 8px 12px;
+    width: 100%; /* Full-width buttons for mobile */
+  }
+}

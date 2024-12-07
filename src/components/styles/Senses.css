@@ -1,0 +1,64 @@
+.snss__cont {
+  height: auto;
+  margin: 70px 0;
+  padding: 0 1rem; /* Add padding for better spacing on smaller screens */
+  background: #F0F7D4;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of content for smaller screens */
+  align-items: center;
+  justify-content: center; /* Center align content for all screens */
+  gap: 2rem; /* Add space between items */
+}
+img {
+  height: 15rem;
+  width: auto; /* Width adjusts automatically to maintain aspect ratio */
+  max-width: 100%;
+}
+.eye-cont,
+.touch-cont,
+.smell-cont,
+.taste-cont,
+.ear-cont {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; /* Center text alignment */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  img {
+    height: 12rem; /* Reduce image size for tablets */
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .snss__cont {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 1.5rem;
+  }
+
+  img {
+    height: 10rem; /* Further reduce image size for small devices */
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    height: 8rem; /* Smaller image size for mobile screens */
+  }
+
+  button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

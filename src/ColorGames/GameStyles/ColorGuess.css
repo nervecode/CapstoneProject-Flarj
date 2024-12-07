@@ -1,0 +1,114 @@
+/* General Styling */
+.color-guessing-game-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #092834;
+  font-size: 2rem;
+}
+
+p {
+  color: #092834;
+  font-size: 18px;
+}
+
+/* Color Display Section */
+.color-display {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current-color {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+}
+
+/* Category Buttons Section */
+.categories {
+  margin: 20px;
+}
+
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem; /* Adjust header size */
+  }
+
+  .color-display {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .current-color {
+    width: 150px; /* Smaller color box */
+    height: 150px;
+  }
+
+  p {
+    font-size: 16px; /* Adjust paragraph font size */
+  }
+
+  button {
+    font-size: 14px; /* Smaller buttons */
+    padding: 8px 16px;
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Smaller header */
+  }
+
+  .color-display {
+    margin: 15px auto;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .current-color {
+    width: 120px; /* Smaller color box */
+    height: 120px;
+  }
+
+  p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  button {
+    font-size: 12px; /* Smaller buttons */
+    padding: 8px 12px;
+    width: 100%; /* Make buttons full width */
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+
+  .message {
+    font-size: 1rem; /* Adjust message font size */
+  }
+}

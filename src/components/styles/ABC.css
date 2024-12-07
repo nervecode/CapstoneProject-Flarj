@@ -1,0 +1,72 @@
+.abc-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.abc-cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100px, 1fr)
+  ); /* Automatically adjusts columns */
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.abc-card {
+  background-color: #f8c471;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.abc-card:hover {
+  transform: scale(1.1);
+  background-color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .abc-container h1 {
+    font-size: 1.8rem; /* Adjust font size of the header for medium screens */
+  }
+
+  .abc-cards {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(120px, 1fr)
+    ); /* Adjust columns on tablets */
+    gap: 10px; /* Reduce gap on smaller screens */
+  }
+
+  .abc-card {
+    font-size: 20px; /* Reduce font size for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .abc-container h1 {
+    font-size: 1.5rem; /* Further reduce font size for small screens */
+  }
+
+  .abc-cards {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(100px, 1fr)
+    ); /* One column or few columns on very small screens */
+    gap: 5px; /* Small gap for compact screens */
+  }
+
+  .abc-card {
+    font-size: 18px; /* Smaller font size for very small screens */
+    padding: 12px; /* Smaller padding on small screens */
+  }
+}

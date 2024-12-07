@@ -1,0 +1,10 @@
+.heart__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 1rem; /* Add padding for small screens */
+  background: #092834;
+  gap: 10rem;
+}

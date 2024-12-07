@@ -1,0 +1,69 @@
+.ear-container {
+  background-color: #f0f7d4;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.ear-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #092834;
+  font-weight: bold;
+}
+
+.ear-container svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Responsive Typography */
+.selected-part-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #66b032;
+}
+
+/* Media Queries */
+
+/* For tablets (screens smaller than 768px) */
+@media (max-width: 768px) {
+  .ear-title {
+    font-size: 2rem;
+  }
+
+  .selected-part-text {
+    font-size: 2rem;
+  }
+
+  .back-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* For mobile phones (screens smaller than 480px) */
+@media (max-width: 480px) {
+  .ear-title {
+    font-size: 1.6rem;
+  }
+
+  .selected-part-text {
+    font-size: 1.5rem;
+  }
+
+  .back-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .ear-container svg {
+    max-width: 300px; /* Reduce diagram size on smaller screens */
+  }
+}

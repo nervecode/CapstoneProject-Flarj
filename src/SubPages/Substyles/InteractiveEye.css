@@ -1,0 +1,95 @@
+/* Page Container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f1eb90;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+.back-btn {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Ensures the button is above other content */
+}
+
+/* Eyes Section */
+.eye-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.eyes {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Eye Styles */
+.eye {
+  width: 30vw; /* Percentage of the viewport width */
+  height: 30vw; /* Maintaining the aspect ratio */
+  max-width: 500px; /* Ensures the eye doesn't get too large */
+  max-height: 500px; /* Ensures the eye doesn't get too large */
+}
+.eye circle {
+  transition: cx 0.1s, cy 0.1s;
+}
+
+/* For tablets (screens smaller than 768px) */
+@media (max-width: 768px) {
+  .back-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .eyes {
+    gap: 30px;
+  }
+
+  .eye {
+    width: 40vw;
+    height: 40vw;
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+
+/* For mobile phones (screens smaller than 480px) */
+@media (max-width: 480px) {
+  .back-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .eyes {
+    gap: 20px;
+  }
+
+  .eye {
+    width: 50vw;
+    height: 50vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
